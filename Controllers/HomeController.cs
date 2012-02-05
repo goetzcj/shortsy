@@ -10,12 +10,12 @@ namespace Shortsy2.Controllers
     {
         public ActionResult Index(string linkid)
         {
+            //Test comment
             Response.StatusCode = 302;
             Response.RedirectLocation = (string.IsNullOrWhiteSpace(linkid)
                     ? "http://www.aspireforit.com"
                     : string.Format("http://bit.ly/{0}", linkid));
             return new ContentResult();
-            //This is a test
         }
     }
 }
